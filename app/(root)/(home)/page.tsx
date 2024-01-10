@@ -7,7 +7,6 @@ export default async function Home({
   searchParams: { genre: string };
 }) {
   const genre = searchParams.genre || "top-rated";
-  // console.log(genre);
   const data = await getMovieCategories(genre);
   const results = data.results;
 

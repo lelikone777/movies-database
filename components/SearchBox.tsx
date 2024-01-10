@@ -12,18 +12,19 @@ export default function SearchBox() {
   };
   return (
     <form
-      className="mx-auto flex max-w-6xl justify-between px-5"
+      className="relative mx-auto mt-4 flex max-w-3xl justify-between px-5"
       onSubmit={handleSubmit}
     >
       <input
         type="text"
         placeholder="Search keywords..."
-        className="h-14 w-full flex-1 rounded-md bg-transparent outline-none placeholder:text-gray-500"
+        className="h-10 w-full flex-1 rounded-md bg-transparent px-5 outline-none placeholder:text-gray-500 dark:bg-gray-600"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
       <button
-        className="text-amber-600 disabled:text-gray-400"
+        className="absolute right-10 top-1/2 h-2/3 -translate-y-1/2 rounded-lg bg-amber-500 px-5 text-white  disabled:bg-amber-100 disabled:text-gray-400"
+        type="submit"
         disabled={search === ""}
       >
         Search

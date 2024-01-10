@@ -9,7 +9,6 @@ export default function Card({ result }: any) {
       <Link href={`/movie/${result.id}`}>
         <Image
           src={`${baseUrlImg}${result.backdrop_path || result.poster_path}`}
-          layout="responsive"
           width={500}
           height={300}
           className="transition-opacity duration-300 group-hover:opacity-75 sm:rounded-t-lg"
