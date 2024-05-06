@@ -14,10 +14,13 @@ export const getMovieCategories = async (movies: string) => {
     //   path = "/trending/all/week";
   } else {
     throw new Error(
-      "Invalid value for 'movies' parameter in getMovieCategories",
+      "Неправильное значения для поиска фильма. Попробуйте снова",
     );
   }
-  const url = `${baseUrl}${path}`;
+
+  const lang = "ru-RU";
+
+  const url = `${baseUrl}${path}?language=${lang}`;
   const options = {
     method: "GET",
     headers: {
@@ -29,13 +32,13 @@ export const getMovieCategories = async (movies: string) => {
   const data = await res.json();
 
   if (!res.ok) {
-    throw new Error("Failed to fetch data in getMovieCategories");
+    throw new Error("Ошибка загрузки данных");
   }
   return data;
 };
 
 export const getSingleMovie = async (movieId: string) => {
-  const url = `${baseUrl}/movie/${movieId}`;
+  const url = `${baseUrl}/movie/${movieId}?language=ru-RU`;
   const options = {
     method: "GET",
     headers: {
@@ -47,7 +50,7 @@ export const getSingleMovie = async (movieId: string) => {
   const data = await res.json();
 
   if (!res.ok) {
-    throw new Error("Failed to fetch data in getSingleMovie");
+    throw new Error("Ошибка загрузки данных");
   }
   return data;
 };

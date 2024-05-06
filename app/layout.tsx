@@ -30,7 +30,6 @@ export default function RootLayout({
         >
           <Header />
           <Navbar />
-          <SearchBox />
           {children}
         </ThemeProvider>
       </body>

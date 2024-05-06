@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { getSingleMovie } from "@/actions/movies.action";
+import { formatDate } from "@/lib/utils";
 
 export default async function MoviePage({ params }: any) {
   const movieId = params.id;
@@ -24,11 +25,14 @@ export default async function MoviePage({ params }: any) {
           </h2>
           <p className="mb-3 text-lg">{movie.overview}</p>
           <p className="mb-3">
-            <span className="mr-1 font-semibold">Date Released:</span>
-            {movie.release_date || movie.first_air_date}
+            <span className="mr-1 font-semibold">Дата выпуска:</span>
+            {movie.release_date && formatDate(movie.release_date)}
+            {!movie.release_date &&
+              movie.first_air_date &&
+              formatDate(movie.first_air_date)}
           </p>
           <p className="mb-3">
-            <span className="mr-1 font-semibold">Rating:</span>
+            <span className="mr-1 font-semibold">Рейтинг:</span>
             {movie.vote_count}
           </p>
         </div>

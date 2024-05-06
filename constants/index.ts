@@ -4,31 +4,31 @@ import { GoHome } from "react-icons/go";
 
 export const NavbarLinks: { title: string; url: string }[] = [
   {
-    title: "now-playing",
+    title: "В прокате сейчас",
     url: "now-playing",
   },
   {
-    title: "top rated",
+    title: "С лучшими оценками",
     url: "top-rated",
   },
   {
-    title: "popular",
+    title: "Популярные",
     url: "popular",
   },
   {
-    title: "upcoming",
+    title: "Скоро выйдут",
     url: "upcoming",
   },
 ];
 
 export const HeaderLinks: { title: string; url: string; icon: IconType }[] = [
   {
-    title: "Home",
+    title: "На главную",
     url: "/",
     icon: GoHome,
   },
   {
-    title: "About",
+    title: "О сайте",
     url: "/about",
     icon: IoMdInformationCircleOutline,
   },

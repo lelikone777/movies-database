@@ -14,9 +14,9 @@ const ErrorComponent: React.FC<ErrorProps> = ({ error, reset }) => {
 
   return (
     <div className="mt-10 text-center">
-      <h1>Something went wrong. Please try again later.</h1>
+      <h1>Что то пошло не так. Попробуйте ещё раз</h1>
       <button className="hover:text-amber-600" onClick={reset}>
-        Try Again
+        Попробуйте ещё раз
       </button>
     </div>
   );

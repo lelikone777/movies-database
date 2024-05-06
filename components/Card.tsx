@@ -2,6 +2,7 @@ import Link from "next/link";
 import { FiThumbsUp } from "react-icons/fi";
 import Image from "next/image";
 import { baseUrlImg } from "@/lib/api";
+import { formatDate } from "@/lib/utils";
 
 export default function Card({ result }: any) {
   return (
@@ -20,7 +21,10 @@ export default function Card({ result }: any) {
             {result.title || result.name}
           </h2>
           <p className="flex items-center">
-            {result.release_date || result.first_air_date}
+            {result.release_date && formatDate(result.release_date)}
+            {!result.release_date &&
+              result.first_air_date &&
+              formatDate(result.first_air_date)}
             <FiThumbsUp className="ml-3 mr-1 h-5" />
             {result.vote_count}
           </p>

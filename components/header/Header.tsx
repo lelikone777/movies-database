@@ -20,9 +20,9 @@ export default function Header() {
         <ModeToggle />
         <Link href={"/"} className="flex items-center gap-2">
           <span className="rounded-lg bg-amber-500 px-2 py-1 text-2xl font-bold">
-            MOVIES
+            Фильмы
           </span>
-          <span className="hidden text-xl sm:inline">Database</span>
+          <span className="hidden text-xl sm:inline">Каталог</span>
         </Link>
       </div>
     </div>

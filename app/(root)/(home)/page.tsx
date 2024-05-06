@@ -1,5 +1,7 @@
 import { getMovieCategories } from "@/actions/movies.action";
 import Results from "@/components/Results";
+import SearchBox from "@/components/SearchBox";
+import React from "react";
 
 export default async function Home({
   searchParams,
@@ -12,6 +14,7 @@ export default async function Home({
 
   return (
     <div>
+      <SearchBox />
       <Results results={results} />
     </div>
   );

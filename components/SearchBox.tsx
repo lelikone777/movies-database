@@ -17,17 +17,17 @@ export default function SearchBox() {
     >
       <input
         type="text"
-        placeholder="Search keywords..."
+        placeholder="Введите название..."
         className="h-10 w-full flex-1 rounded-md bg-transparent px-5 outline-none placeholder:text-gray-500 dark:bg-gray-600"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
       <button
-        className="absolute right-10 top-1/2 h-2/3 -translate-y-1/2 rounded-lg bg-amber-500 px-5 text-white  disabled:bg-amber-100 disabled:text-gray-400"
+        className="absolute right-10 top-1/2 h-2/3 -translate-y-1/2 cursor-pointer rounded-lg bg-amber-500 px-5  text-white disabled:bg-amber-100 disabled:text-gray-400"
         type="submit"
         disabled={search === ""}
       >
-        Search
+        Найти
       </button>
     </form>
   );
