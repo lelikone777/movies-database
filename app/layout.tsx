@@ -5,7 +5,6 @@ import "./globals.css";
 import Header from "@/components/header/Header";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import Navbar from "@/components/navbar/Navbar";
-import SearchBox from "@/components/SearchBox";
 
 const inter = Inter({ subsets: ["latin"] });
 
